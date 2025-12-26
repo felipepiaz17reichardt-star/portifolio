@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafeteria Aconchegante</title>
+<style>
+    /* Fonte e cores quentes */
+    body {
+        font-family: 'Georgia', serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fdf6f0;
+        color: #4b3621;
+    }
+
+    /* Header simples */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #7b4f35;
+        color: #fff;
+    }
+    header .logo {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    header a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #ff5a1f;
+        transition: background 0.3s, transform 0.2s;
+    }
+    header a:hover {
+        background-color: #ff7f50;
+        transform: scale(1.1);
+    }
+
+    /* Hero chamativo */
+    .hero {
+        background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+        background: rgba(123, 79, 53, 0.6);
+        padding: 25px 40px;
+        border-radius: 15px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    /* Menu / apresentação de produtos */
+    .menu {
+        padding: 50px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    .card {
+        background-color: #fff3e6;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+    .card img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s;
+    }
+    .card:hover img {
+        transform: scale(1.08) rotate(-1deg);
+    }
+    .card .info {
+        padding: 15px;
+        text-align: center;
+    }
+    .card .info h3 {
+        margin: 10px 0 5px;
+        font-size: 1.2rem;
+    }
+    .card .info p {
+        font-size: 0.95rem;
+        color: #6b4c36;
+    }
+
+    /* Contato com CTA chamativo */
+    .contato {
+        background-color: #f7e9de;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .contato h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .contato p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    .contato a {
+        display: inline-block;
+        padding: 20px 40px;
+        background-color: #ff5a1f;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    }
+    .contato a:hover {
+        background-color: #ff7f50;
+        transform: scale(1.1);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    /* Footer simples */
+    footer {
+        background-color: #7b4f35;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Cafeteria & Charme</div>
+    <a href="https://wa.me/554799693538" target="_blank">WhatsApp</a>
+</header>
+
+<section class="hero">
+    <h1>Seu café perfeito começa aqui</h1>
+</section>
+
+<section class="menu">
+    <div class="card">
+        <img src="https://villacafe.com.br/blog/wp-content/uploads/2016/03/villa-cafe-gourmet-para-site.jpg" alt="Café">
+        <div class="info">
+            <h3>Café Expresso</h3>
+            <p>Intenso e aromático.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://www.sabornamesa.com.br/media/k2/items/cache/652db931b03434af33c6ed02458509c9_XL.jpg" alt="Bolo">
+        <div class="info">
+            <h3>Bolo de Chocolate</h3>
+            <p>Fofinho e irresistível.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://www.sabornamesa.com.br/media/k2/items/cache/2a8e1377a86b78fb480ecd3a62e761cd_XL.jpg   " alt="Doce">
+        <div class="info">
+            <h3>Cheesecake</h3>
+            <p>Delícia cremosa.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contato">
+    <h2>Visite-nos ou fale com a gente</h2>
+    <p>Horário de funcionamento: 08:00 - 20:00</p>
+    <a href="https://wa.me/554799693538" target="_blank">Fale conosco no WhatsApp</a>
+</section>
+
+<footer>
+    <p>Rua das Flores, 123 - Cidade | <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+</footer>
+
+</body>
+</html>
