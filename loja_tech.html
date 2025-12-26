@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechShop - Loja de Tecnologia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0a0a0a;
+      border-bottom: 1px solid #00ffff33;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00ffff;
+    }
+
+    header .whatsapp-btn {
+      background: linear-gradient(90deg, #00ffff, #00ff99);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      box-shadow: 0 0 10px #00ffff66;
+      transition: 0.3s;
+    }
+
+    header .whatsapp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+   
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: #00ffff;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta-btn {
+      background: linear-gradient(90deg, #00ffff, #00ff99);
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 0 15px #00ffff66;
+      transition: 0.3s;
+    }
+
+    .hero .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ff99;
+    }
+
+    
+    .products {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .products h2 {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ffff33;
+    }
+
+    .product-card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card .product-info {
+      padding: 1rem;
+    }
+
+    .product-card h3 {
+      color: #00ffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+    }
+
+    .product-card .price {
+      font-weight: 700;
+      color: #00ff99;
+    }
+
+    
+    .advantages {
+      background-color: #0d0d0d;
+      padding: 4rem 2rem;
+    }
+
+    .advantages h2 {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .adv-card {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      border-radius: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ffff33;
+    }
+
+    .adv-card:hover {
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .adv-card i {
+      font-size: 2rem;
+      color: #00ffff;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+   
+    footer {
+      background-color: #0a0a0a;
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid #00ffff33;
+    }
+
+    footer p, footer a {
+      color: #ccc;
+      margin: 0.5rem 0;
+    }
+
+    footer a:hover {
+      color: #00ffff;
+    }
+
+    @media (max-width:768px){
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script> <!-- Se quiser usar ícones FontAwesome -->
+</head>
+<body>
+
+ 
+  <header>
+    <div class="logo">TechShop</div>
+    <a href="https://wa.me/554799693538" class="whatsapp-btn">WhatsApp</a>
+  </header>
+
+ 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>A tecnologia que você procura, na palma da sua mão</h1>
+      <p>Os melhores celulares e peças de computador com garantia e suporte especializado.</p>
+      <a href="https://wa.me/554799693538" class="cta-btn">Compre pelo WhatsApp</a>
+    </div>
+  </section>
+
+ 
+  <section class="products">
+    <h2>Destaques</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80" alt="Celular">
+        <div class="product-info">
+          <h3>Smartphone X</h3>
+          <p>Desempenho incrível e câmera avançada</p>
+          <div class="price">R$ 3.499</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://s2-techtudo.glbimg.com/o8eOOhSdvio3UAu3jP8A7QFZbfg=/0x0:1280x779/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/3/l/JzjLLhQf64MQw9OW9WuA/4060.png" alt="Placa de Vídeo">
+        <div class="product-info">
+          <h3>Placa de Vídeo RTX</h3>
+          <p>Gráficos de última geração</p>
+          <div class="price">R$ 4.200</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80" alt="Notebook">
+        <div class="product-info">
+          <h3>Notebook Gamer</h3>
+          <p>Velocidade e performance para games</p>
+          <div class="price">R$ 5.999</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="advantages">
+    <h2>Por que escolher a TechShop?</h2>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Entrega rápida</h3>
+      </div>
+      <div class="adv-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Garantia de 1 ano</h3>
+      </div>
+      <div class="adv-card">
+        <i class="fas fa-headset"></i>
+        <h3>Suporte especializado</h3>
+      </div>
+    </div>
+  </section>
+
+ 
+  <footer>
+    <p>Endereço: Rua da Tecnologia, 123 - Cidade, Estado</p>
+    <p>WhatsApp: <a href="https://wa.me/554799693538">+55 47 9969-3538</a></p>
+    <p>Redes sociais: 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+</body>
+</html>
