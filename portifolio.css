@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Card principal */
+.portfolio {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+.portfolio:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+.image img:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Conteúdo */
+.content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.content h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff66;
+}
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+.content ul {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+.content ul li {
+  list-style: "✓ ";
+  margin-left: 10px;
+  color: #00ff99;
+  font-weight: 500;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 35px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,255,255,0.2);
+}
+.btn.whatsapp {
+  background: linear-gradient(90deg, #25D366, #1ebe5d);
+  color: #fff;
+}
+.btn.whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(37,211,102,0.5);
+}
+
+.btn.email {
+  background: linear-gradient(90deg, #00ffff, #00ff99);
+  color: #0a0a0a;
+}
+.btn.email:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0,255,255,0.5);
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  .buttons {
+    justify-content: center;
+  }
+}

@@ -5,97 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projetos - Portfólio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-  * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-  }
-
-  body {
-    background: #121212;
-    color: #fff;
-    min-height:100vh;
-    padding: 40px 20px;
-  }
-
-  h1 {
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2.5rem;
-    color:#00ffff;
-  }
-
-  .projects-grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap:30px;
-    max-width:1200px;
-    margin:0 auto;
-  }
-
-  .project-card {
-    background:#1e1e1e;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,255,255,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow:0 10px 30px rgba(0,255,255,0.4);
-  }
-
-  .project-card img {
-    width:100%;
-    display:block;
-    height:180px;
-    object-fit:cover;
-    transition: transform 0.3s;
-  }
-
-  .project-card:hover img {
-    transform: scale(1.05);
-  }
-
-  .project-info {
-    padding:20px;
-    text-align:center;
-  }
-
-  .project-info h3 {
-    margin-bottom:10px;
-    color:#00ffff;
-  }
-
-  .project-info p {
-    margin-bottom:15px;
-    color:#ccc;
-    font-size:0.95rem;
-  }
-
-  .project-info a {
-    display:inline-block;
-    padding:10px 20px;
-    background:linear-gradient(90deg,#00ffff,#00ff99);
-    border-radius:10px;
-    color:#000;
-    font-weight:700;
-    transition:0.3s;
-    text-decoration:none;
-  }
-
-  .project-info a:hover {
-    transform:scale(1.05);
-    box-shadow:0 0 10px #00ffff;
-  }
-
-  @media(max-width:768px){
-    h1 { font-size:2rem; }
-  }
-</style>
+<link rel="stylesheet" href="projetos.css">
 </head>
 <body>
 
@@ -117,7 +27,7 @@
     <div class="project-info">
       <h3>Cafeteria Aconchegante</h3>
       <p>Layout acolhedor e responsivo, com menu de produtos e CTA para WhatsApp.</p>
-      <a href="cafeteria.html" target="_blank">Ver Projeto</a>
+      <a href="Cafeteria.html" target="_blank">Ver Projeto</a>
     </div>
   </div>
 
@@ -130,9 +40,16 @@
     </div>
   </div>
 
+  <div class="project-card">
+    <img src="https://assets-blog.hostgator.com.br/wp-content/uploads/2024/09/AnyConv.com__310509635_f67e67ed-6a6f-4352-96d1-24419861f393-scaled.webp" alt="">
+    <div class="project-info">
+      <h3>Hub</h3>
+      <p>Hub pessoal com foco em design simples e responsivo para organizar meus projetos e contatos.</p>
+      <a href="hub.html" target="_blank">Ver Projeto</a>
+    </div>
+  </div>
+
 </div>
 
 </body>
 </html>
-
-

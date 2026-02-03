@@ -1,0 +1,233 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0a0a0a;
+      border-bottom: 1px solid #00ffff33;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00ffff;
+    }
+
+    header .whatsapp-btn {
+      background: linear-gradient(90deg, #00ffff, #00ff99);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      box-shadow: 0 0 10px #00ffff66;
+      transition: 0.3s;
+    }
+
+    header .whatsapp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+   
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: #00ffff;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta-btn {
+      background: linear-gradient(90deg, #00ffff, #00ff99);
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 0 15px #00ffff66;
+      transition: 0.3s;
+    }
+
+    .hero .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ff99;
+    }
+
+    
+    .products {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .products h2 {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ffff33;
+    }
+
+    .product-card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card .product-info {
+      padding: 1rem;
+    }
+
+    .product-card h3 {
+      color: #00ffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+    }
+
+    .product-card .price {
+      font-weight: 700;
+      color: #00ff99;
+    }
+
+    
+    .advantages {
+      background-color: #0d0d0d;
+      padding: 4rem 2rem;
+    }
+
+    .advantages h2 {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .adv-card {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      border-radius: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ffff33;
+    }
+
+    .adv-card:hover {
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .adv-card i {
+      font-size: 2rem;
+      color: #00ffff;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+   
+    footer {
+      background-color: #0a0a0a;
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid #00ffff33;
+    }
+
+    footer p, footer a {
+      color: #ccc;
+      margin: 0.5rem 0;
+    }
+
+    footer a:hover {
+      color: #00ffff;
+    }
+
+    @media (max-width:768px){
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
